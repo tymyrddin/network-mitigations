@@ -1,4 +1,4 @@
-# Attack Trees
+# Network mitigations
 
 ![Publish Network mitigations using Sphinx](https://github.com/tymyrddin/network-mitigations/workflows/Publish%20Network%20mitigations%20using%20Sphinx/badge.svg?branch=main)
  Deployed: https://tymyrddin.github.io/network-mitigations/
