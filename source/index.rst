@@ -6,6 +6,10 @@
 Network mitigations
 ===============================================
 
+All `Mitigations`_.
+
+.. _Mitigations: https://tymyrddin.github.io/mitigations/
+
 The policies and practices adopted to prevent, monitor, and recover from network attacks. On a general level mostly (for now), and a sprinkle of concreteness based on our own home network.
 
 .. toctree::
