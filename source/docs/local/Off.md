@@ -12,6 +12,6 @@ Get your router's IP address
 
     $ host myip.opendns.com resolver1.opendns.com
 
-[Scan your router's public IP address](https://tymyrddin.github.io/cheatsheets/docs/scanning/Nmap-cheatsheet.html) for open ports.
+[Scan your router's public IP address](cheatsheets:docs/scanning/Nmap-cheatsheet) for open ports.
 
  
