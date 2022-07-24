@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disable WPS &mdash; Network mitigations</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="DropBear SSH public key authentication (OpenWRT)" href="DropBear.html" />
+    <link rel="prev" title="Change router defaults" href="Change-router-defaults.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Network mitigations
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Local</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Home network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Add-a-second-NAT-router.html">Add a second NAT router</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Change-router-defaults.html">Change router defaults</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Disable WPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DropBear.html">DropBear SSH public key authentication (OpenWRT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Encryption.html">Use the strongest encryption protocol available</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flash-router-with-other-firmware.html">Flash router with other firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nethogs.html">Nethogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Off.html">Turn it off</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Off.html#disable-services-when-not-needed">Disable services when not needed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Port-forwarding.html">Port forwarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Portknocking.html">Portknocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Protect-router-management.html">Protect router management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reduce-wireless-signal-strength.html">Reduce wireless signal strength</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Services-audit.html">Services audit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unauthorised-devices.html">Unauthorised devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Upgrade-router-firmware.html">Upgrade router firmware</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Intranet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/README.html">Intranet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/ARP-spoofing.html">ARP spoofing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/DNS-cache-poisoning.html">DNS cache poisoning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/LAN-segmentation.html">LAN segmentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/NFTables.html">NFTables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/Snort-box.html">Snort box</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Internet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../internet/README.html">Internet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internet/BGP-hijacking.html">BGP hijacking mitigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internet/Certificate-validation.html">Certificate validation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">All mitigations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/mitigations/">Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Network mitigations</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Disable WPS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/local/Disable-WPS.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="disable-wps">
+<h1>Disable WPS<a class="headerlink" href="#disable-wps" title="Permalink to this heading"></a></h1>
+<p>The Wi-Fi Protected Setup (WPS) protocol in home routers is like labelling it “HACK ME!”. WPS was a bad idea to begin with, has a big design flaw in PIN authentication, comes from a source that is not trusted, is very complicated and as a result there have been multiple instances of poorly written, buggy implementations. The design flaw in the WPS specification for PIN authentication significantly reduces the time required for a cyber attacker to brute force an entire PIN, because it informs them when the first half of the eight-digit PIN is correct. Many routers lack a lockout policy after a certain number of failed attempts to guess the PIN, making a brute-force attack much more likely to occur.</p>
+<section id="check-for-wps">
+<h2>Check for WPS<a class="headerlink" href="#check-for-wps" title="Permalink to this heading"></a></h2>
+<p>The feature that scans for nearby networks on operating systems like OS X, iOS, Windows, Android and Chrome OS does not report on WPS.</p>
+<ul class="simple">
+<li><p>On Windows, the free and portable <a class="reference external" href="https://www.nirsoft.net/utils/wifi_information_view.html">WifiInfoView</a> includes reporting on WPS. When WPS is enabled, the status is either Configured, Not Configured, or Locked. A value of “No” means WPS is not enabled.</p></li>
+<li><p>On Android, the <a class="reference external" href="https://play.google.com/store/apps/details?id=com.farproc.wifi.analyzer&amp;hl=en">Wi-Fi Analyzer app</a> shows if WPS is supported for each SSID detected by displaying an On/Off status. If WPS is enabled, it displays “WPS”, otherwise it displays nothing.</p></li>
+</ul>
+</section>
+<section id="warnings">
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Wi-Fi Direct uses WPS to make the connection using either Near Field Communication, a PIN, Bluetooth or a button press.</p></li>
+<li><p><a class="reference external" href="https://www.computerworld.com/article/3193163/networking/how-seven-mesh-routers-deal-with-wps.html">How seven mesh routers deal with Wi-Fi Protected Setup (WPS)</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Change-router-defaults.html" class="btn btn-neutral float-left" title="Change router defaults" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="DropBear.html" class="btn btn-neutral float-right" title="DropBear SSH public key authentication (OpenWRT)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

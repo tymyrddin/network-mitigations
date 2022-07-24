@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flash router with other firmware &mdash; Network mitigations</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Nethogs" href="Nethogs.html" />
+    <link rel="prev" title="Use the strongest encryption protocol available" href="Encryption.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Network mitigations
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Local</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Home network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Add-a-second-NAT-router.html">Add a second NAT router</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Change-router-defaults.html">Change router defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Disable-WPS.html">Disable WPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DropBear.html">DropBear SSH public key authentication (OpenWRT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Encryption.html">Use the strongest encryption protocol available</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flash router with other firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nethogs.html">Nethogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Off.html">Turn it off</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Off.html#disable-services-when-not-needed">Disable services when not needed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Port-forwarding.html">Port forwarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Portknocking.html">Portknocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Protect-router-management.html">Protect router management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reduce-wireless-signal-strength.html">Reduce wireless signal strength</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Services-audit.html">Services audit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unauthorised-devices.html">Unauthorised devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Upgrade-router-firmware.html">Upgrade router firmware</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Intranet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/README.html">Intranet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/ARP-spoofing.html">ARP spoofing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/DNS-cache-poisoning.html">DNS cache poisoning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/LAN-segmentation.html">LAN segmentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/NFTables.html">NFTables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/Snort-box.html">Snort box</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Internet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../internet/README.html">Internet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internet/BGP-hijacking.html">BGP hijacking mitigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internet/Certificate-validation.html">Certificate validation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">All mitigations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/mitigations/">Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Network mitigations</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Flash router with other firmware</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/local/Flash-router-with-other-firmware.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flash-router-with-other-firmware">
+<h1>Flash router with other firmware<a class="headerlink" href="#flash-router-with-other-firmware" title="Permalink to this heading"></a></h1>
+<p>Routers supplied by ISPs are typically less secure than those sold by manufacturers to consumers. They often have hard-coded remote support credentials that users can’t change and patches for their customized firmware versions lag behind patches for the same flaws released by router manufacturers. There are several Linux-based, community-maintained firmware projects for a wide range of home routers. OpenWRT, DD-WRT and Asuswrt-Merlin (for Asus routers only). But, loading custom firmware on a router requires some technical knowledge, will likely void its warranty and, if done incorrectly, can brick the device.</p>
+<section id="dd-wrt">
+<h2>DD-WRT<a class="headerlink" href="#dd-wrt" title="Permalink to this heading"></a></h2>
+<p>DD-WRT has become a common out-of-the-box option for many routers, but also exists in stand-alone implementations that can be used to flash routers that support it. It has a slightly convoluted history. From 2002, Linksys released a line of routers (WRT54G) with Linux. The company was eventually obliged to release the source code for those routers under the terms of the GPL. DD-WRT has become the basis for other firmware created by router manufacturers themselves and while DD-WRT is released under the terms of the GPL, commercial builds of such firmware may incorporate much non-GPL code.</p>
+</section>
+<section id="openwrt">
+<h2>OpenWrt<a class="headerlink" href="#openwrt" title="Permalink to this heading"></a></h2>
+<p>OpenWrt is more like a real Linux distribution than DD-WRT. It comes with its own package manager. Setting up and running OpenWrt can be an involved process, because users can make any changes they want from a broad range of components directly inside OpenWrt. Updates come frequently and its package manager makes it easy for users to take advantage of those updates.</p>
+<section id="example-flashing-a-tl-wr841n-d">
+<h3>Example: Flashing a TL-WR841N(D)<a class="headerlink" href="#example-flashing-a-tl-wr841n-d" title="Permalink to this heading"></a></h3>
+<p>Read <a class="reference external" href="https://openwrt.org/docs/guide-quick-start/factory_installation">Factory install: First-time installation on a device</a>.</p>
+<p>For showing how easy it is:</p>
+<ul class="simple">
+<li><p>Look on the bottom of your router. There is a version number on the label. In my case at the time of writing that was 9.2.</p></li>
+<li><p>Go to OpenWrt and find the <a class="reference external" href="https://openwrt.org/toh/tp-link/tl-wr841nd">TL-WR841ND software</a> (note that it is now no longer recommended to flash this type of router, but for 9.x a version is available that still works). On that page you can also read the latest notes on the versions, with links to bugs and discussions. Download the image for your version.</p></li>
+<li><p>Open the router web interface page on <code class="docutils literal notranslate"><span class="pre">tplinklogin.net</span></code> or <code class="docutils literal notranslate"><span class="pre">192.168.1.1</span></code>. If you never changed your password, tsk, tsk, it is [default user : admin, password: admin]. If you forgot, <a class="reference external" href="https://www.tp-link.com/en/support/faq/497/">reset the router</a> and then login with the defaults (in which case you can skip the next step). If you did have a password set, log in.</p></li>
+<li><p>Do a factory reset after taking a look at your current settings.</p></li>
+<li><p>Go to the firmware upgrade page and select the firmware image you just downloaded as an update.</p></li>
+<li><p>Upgrade and set a password</p></li>
+</ul>
+<p>Done.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Encryption.html" class="btn btn-neutral float-left" title="Use the strongest encryption protocol available" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Nethogs.html" class="btn btn-neutral float-right" title="Nethogs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

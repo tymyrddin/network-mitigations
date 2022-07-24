@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add a second NAT router &mdash; Network mitigations</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Change router defaults" href="Change-router-defaults.html" />
+    <link rel="prev" title="Home network" href="README.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Network mitigations
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Local</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Home network</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Add a second NAT router</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Change-router-defaults.html">Change router defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Disable-WPS.html">Disable WPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DropBear.html">DropBear SSH public key authentication (OpenWRT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Encryption.html">Use the strongest encryption protocol available</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flash-router-with-other-firmware.html">Flash router with other firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Nethogs.html">Nethogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Off.html">Turn it off</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Off.html#disable-services-when-not-needed">Disable services when not needed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Port-forwarding.html">Port forwarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Portknocking.html">Portknocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Protect-router-management.html">Protect router management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reduce-wireless-signal-strength.html">Reduce wireless signal strength</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Services-audit.html">Services audit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unauthorised-devices.html">Unauthorised devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Upgrade-router-firmware.html">Upgrade router firmware</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Intranet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/README.html">Intranet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/ARP-spoofing.html">ARP spoofing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/DNS-cache-poisoning.html">DNS cache poisoning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/LAN-segmentation.html">LAN segmentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/NFTables.html">NFTables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intranet/Snort-box.html">Snort box</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Internet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../internet/README.html">Internet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internet/BGP-hijacking.html">BGP hijacking mitigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internet/Certificate-validation.html">Certificate validation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">All mitigations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/mitigations/">Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Network mitigations</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Add a second NAT router</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/local/Add-a-second-NAT-router.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="add-a-second-nat-router">
+<h1>Add a second NAT router<a class="headerlink" href="#add-a-second-nat-router" title="Permalink to this heading"></a></h1>
+<p>If all of the machines on a NAT network are not equally secure and trustworthy, if a machine is infected, the malware could have access to every other uninfected machine sharing the once-secure LAN. By sending //ARP broadcasts// to the LAN, an infected machine can determine the IP and MAC addresses of every other machine on the LAN.</p>
+<p>This is a known LAN-side vulnerability and why many viruses and worms attempt to spread not only by scanning the internet for additional vulnerable targets, but also try to spread locally through M$ file sharing, RPC vulnerabilities, and many other well-known vulnerabilities. A case of Emmenthaler cheese with extra holes of which only some crumbs are left on the plate.</p>
+<p>A second NAT router can be used on the internal LAN to create a second, more secure LAN.</p>
+<p><img alt="Add NAT" src="../../_images/addnat.png" /></p>
+<ul class="simple">
+<li><p>Machines on the //More or less secure internal LAN// can access the internet, but they are protected by the //External NAT// from most malwares.</p></li>
+<li><p>Machines on the //More secure internal LAN// can also access the internet, first by going out through the //Internal NAT// and then the //External NAT//.</p></li>
+<li><p>Because the //More or less secure internal LAN// is on the //WAN side// of the //Internal NAT//, machines on the //More or less secure internal LAN// are unable to freely access the machines on the //More secure LAN// behind the //Internal NAT//. Machines behind the //Internal NAT// can access the machines in the middle, but NOT the other way around.</p></li>
+</ul>
+<p>When and where is this useful?</p>
+<ul class="simple">
+<li><p>For isolating a router’s Demilitarised Zone (DMZ) network and servers.</p></li>
+<li><p>Isolating an open or low-security wireless access point.</p></li>
+<li><p>Protecting one ‘’high-value’’ machine from the rest of the network.</p></li>
+</ul>
+<section id="take-control-of-the-internal-nat-router">
+<h2>Take control of the Internal NAT router<a class="headerlink" href="#take-control-of-the-internal-nat-router" title="Permalink to this heading"></a></h2>
+<p>This can be made even more secure by flashing the //Internal NAT// router with custom router firmware, tightening security via its firewall, and securing access to it.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="README.html" class="btn btn-neutral float-left" title="Home network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Change-router-defaults.html" class="btn btn-neutral float-right" title="Change router defaults" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>

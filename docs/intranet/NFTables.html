@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFTables &mdash; Network mitigations</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Snort box" href="Snort-box.html" />
+    <link rel="prev" title="LAN segmentation" href="LAN-segmentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Network mitigations
+            <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Local</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../local/README.html">Home network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Add-a-second-NAT-router.html">Add a second NAT router</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Change-router-defaults.html">Change router defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Disable-WPS.html">Disable WPS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/DropBear.html">DropBear SSH public key authentication (OpenWRT)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Encryption.html">Use the strongest encryption protocol available</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Flash-router-with-other-firmware.html">Flash router with other firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Nethogs.html">Nethogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Off.html">Turn it off</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Off.html#disable-services-when-not-needed">Disable services when not needed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Port-forwarding.html">Port forwarding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Portknocking.html">Portknocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Protect-router-management.html">Protect router management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Reduce-wireless-signal-strength.html">Reduce wireless signal strength</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Services-audit.html">Services audit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Unauthorised-devices.html">Unauthorised devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local/Upgrade-router-firmware.html">Upgrade router firmware</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Intranet</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Intranet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ARP-spoofing.html">ARP spoofing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DNS-cache-poisoning.html">DNS cache poisoning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LAN-segmentation.html">LAN segmentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NFTables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Snort-box.html">Snort box</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Internet</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../internet/README.html">Internet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internet/BGP-hijacking.html">BGP hijacking mitigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internet/Certificate-validation.html">Certificate validation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">All mitigations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://tymyrddin.github.io/mitigations/">Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Network mitigations</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>NFTables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/docs/intranet/NFTables.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nftables">
+<h1>NFTables<a class="headerlink" href="#nftables" title="Permalink to this heading"></a></h1>
+<p>For ‘’NAT’’:</p>
+<ul class="simple">
+<li><p>The ARP address family only supports the input and output hook</p></li>
+<li><p>The bridge address family only supports the input, forward and output hook?</p></li>
+<li><p>Masquerading is a kind of source NAT.</p></li>
+<li><p>nftables masquerade will not work if iptables masquerade is in the kernel (unload or disable it).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">flush</span> <span class="n">ruleset</span>
+
+<span class="n">table</span> <span class="n">ip</span> <span class="n">nat</span> <span class="p">{</span>
+    <span class="c1"># Destination NAT</span>
+    <span class="n">chain</span> <span class="n">prerouting</span> <span class="p">{</span>
+        <span class="nb">type</span> <span class="n">nat</span> <span class="n">hook</span> <span class="n">prerouting</span> <span class="n">priority</span> <span class="mi">100</span><span class="p">;</span> <span class="n">policy</span> <span class="n">accept</span><span class="p">;</span>
+        
+    <span class="p">}</span>
+    <span class="c1"># Source NAT. Masquerading is a kind of source NAT.</span>
+    <span class="c1"># Can only be used in chains of type nat and only works in the output path.</span>
+    <span class="c1"># Make sure masquerading is enabled in the kernel (true if using default kernel) </span>
+    <span class="c1"># nftables masquerade will not work if iptables masquerade is in the kernel (unload or disable it).</span>
+    <span class="n">chain</span> <span class="n">postrouting</span> <span class="p">{</span>
+        <span class="nb">type</span> <span class="n">nat</span> <span class="n">hook</span> <span class="n">postrouting</span> <span class="n">priority</span> <span class="mi">100</span><span class="p">;</span> <span class="n">policy</span> <span class="n">accept</span><span class="p">;</span>        
+        <span class="n">oifname</span> <span class="p">{</span><span class="n">enp3s0</span><span class="p">,</span> <span class="n">tun0</span><span class="p">}</span> <span class="n">masquerade</span>
+    <span class="p">}</span>
+    
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="LAN-segmentation.html" class="btn btn-neutral float-left" title="LAN segmentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Snort-box.html" class="btn btn-neutral float-right" title="Snort box" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+        <a href="https://unseen-uni.netlify.app/">Unseen University</a>, 2022
+
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
